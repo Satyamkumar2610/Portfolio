@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+  --color-primary: #3b82f6;
+  --color-secondary: #1e293b;
+  --color-accent: #60a5fa;
+  --color-muted: #94a3b8;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-50;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500;
+}
