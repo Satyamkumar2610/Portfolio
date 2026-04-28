@@ -17,9 +17,9 @@ export function Projects() {
               <a href="https://github.com/Satyamkumar2610/I-ASCAP" target="_blank" rel="noreferrer" className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-ink hover:text-sky transition-colors">
                 <GitBranch size={16} /> Repository
               </a>
-              <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-amber">
-                <Globe size={16} /> Live Demo Soon
-              </span>
+              <a href="https://i-ascap.vercel.app" target="_blank" rel="noreferrer" className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-amber hover:text-amber/80 transition-colors">
+                <Globe size={16} /> View Live ↗
+              </a>
             </div>
           </div>
 

@@ -13,7 +13,7 @@ export function About() {
               viewport={{ once: true }}
               className="text-4xl md:text-6xl leading-[1.1] text-paper mb-12"
             >
-              "I build the infrastructure that helps us <span className="text-sky">understand the ground</span> we stand on."
+              "I build interfaces that help us <span className="text-sky">see the story</span> hidden in the numbers."
             </motion.h2>
             
             <div className="w-24 h-[1px] bg-sky mb-12" />
@@ -21,29 +21,29 @@ export function About() {
 
           <div className="w-full md:w-2/5 border-l border-ink/20 pl-8 space-y-8">
             <div className="space-y-4">
-              <h3 className="font-mono text-[10px] uppercase tracking-widest text-sky">The Motivation</h3>
+              <h3 className="font-mono text-[10px] uppercase tracking-widest text-sky">The Focus</h3>
               <p className="text-sm text-ink leading-relaxed font-light">
-                I am a Data Engineer and ML Developer obsessed with resolving the fragmentation of Indian agricultural data. I believe that open-access, harmonized geospatial data is the fundamental layer for climate resilience and farm productivity.
+                I am a Data Visualization expert and Analyst based in Sonipat. I specialize in taking fragmented datasets—from agricultural records to executive sales logs—and synthesizing them into clear, actionable visual narratives.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="font-mono text-[10px] uppercase tracking-widest text-sky">Technical Philosophy</h3>
+              <h3 className="font-mono text-[10px] uppercase tracking-widest text-sky">Visual Philosophy</h3>
               <p className="text-sm text-ink leading-relaxed font-light">
-                I don't just build dashboards; I build engines. Whether it's the DistrictHarmonizer resolving boundary conflicts or LangGraph ReAct agents providing farm advice, my focus is on turning noisy historical datasets into high-fidelity intelligence.
+                For me, a chart isn't just a graphic; it's a decision-making tool. I focus on selecting the right visual encoding to answer the specific question at hand, whether that's mapping 60 years of crop trends or identifying sales anomalies.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="font-mono text-[10px] uppercase tracking-widest text-sky">Current Mission</h3>
+              <h3 className="font-mono text-[10px] uppercase tracking-widest text-sky">DVA Journey</h3>
               <p className="text-sm text-ink leading-relaxed font-light">
-                Currently scaling I-ASCAP to serve as a research-grade platform for the Indian agriculture community, leveraging PostGIS for spatial temporal analysis and FastAPI for high-performance data delivery.
+                As a student of DVA at Newton School of Technology, I'm constantly exploring the intersection of data engineering and design, building projects like I-ASCAP to solve real-world information clarity problems.
               </p>
             </div>
 
             <div className="pt-8">
               <p className="font-mono text-[9px] text-ink/60 uppercase tracking-widest">
-                📍 Sonipat, Haryana · Open to Global Opportunities
+                📍 Sonipat, Haryana · DVA Scholar · Building since 2023
               </p>
             </div>
           </div>
