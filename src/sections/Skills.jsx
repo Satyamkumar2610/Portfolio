@@ -1,79 +1,70 @@
 import { motion } from 'framer-motion';
+import { Database, Brain, Globe, Code } from 'lucide-react';
 
-const skills = [
-  { name: 'React', size: 120, cluster: 'frontend', x: 20, y: 30 },
-  { name: 'JavaScript', size: 100, cluster: 'frontend', x: 45, y: 20 },
-  { name: 'Tailwind', size: 90, cluster: 'frontend', x: 25, y: 55 },
-  { name: 'REST APIs', size: 85, cluster: 'frontend', x: 50, y: 45 },
-  { name: 'Recharts', size: 130, cluster: 'data', x: 75, y: 35 },
-  { name: 'Chart.js', size: 80, cluster: 'data', x: 70, y: 60 },
-  { name: 'Data Cleaning', size: 110, cluster: 'data', x: 85, y: 55 },
-  { name: 'Git', size: 70, cluster: 'tools', x: 50, y: 80 },
-  { name: 'Postman', size: 65, cluster: 'tools', x: 35, y: 85 },
-  { name: 'Figma', size: 75, cluster: 'tools', x: 65, y: 85 },
+const skillGroups = [
+  {
+    title: "Geospatial & Data Engineering",
+    icon: <Database className="text-sky" size={24} />,
+    skills: ["Python (Pandas, GeoPandas)", "PostgreSQL / PostGIS", "SQL", "I-ASCAP Data Pipelines", "Spatial Temporal Analysis"]
+  },
+  {
+    title: "ML / AI & Analytics",
+    icon: <Brain className="text-amber" size={24} />,
+    skills: ["LangGraph (ReAct Agents)", "ChromaDB (RAG)", "Random Forest", "Groq API", "Inference Optimization"]
+  },
+  {
+    title: "Full Stack & GIS UI",
+    icon: <Globe className="text-sky" size={24} />,
+    skills: ["Next.js 14 (App Router)", "FastAPI", "Mapbox GL JS", "Tailwind CSS", "REST / Streaming APIs"]
+  },
+  {
+    title: "Tools & Infrastructure",
+    icon: <Code className="text-ink" size={24} />,
+    skills: ["Git / GitHub", "Docker", "Postman", "Linux", "VS Code"]
+  }
 ];
-
-const clusterColors = {
-  frontend: 'border-sky text-sky bg-sky/5',
-  data: 'border-amber text-amber bg-amber/5',
-  tools: 'border-ink text-ink bg-ink/5'
-};
 
 export function Skills() {
   return (
-    <section className="py-32 relative overflow-hidden bg-bg">
-      <div className="text-editorial mb-24">
-        <h2 className="text-4xl md:text-5xl mb-6">Technical <span className="italic">Taxonomy</span></h2>
-        <p className="text-ink max-w-lg leading-relaxed">
-          Instead of a list, I view my skills as a constellation of related tools. 
-          The size represents my relative familiarity and the time I spend in that environment.
+    <section className="py-32 bg-bg relative border-t border-ink/10">
+      <div className="text-editorial mb-20">
+        <h2 className="text-4xl md:text-5xl mb-6 font-serif">Technical <span className="italic">Expertise</span></h2>
+        <p className="text-ink max-w-lg leading-relaxed font-light">
+          A specialized stack focused on the intersection of geospatial engineering, 
+          machine learning, and high-performance data infrastructure.
         </p>
       </div>
 
-      <div className="relative w-full aspect-[4/3] md:aspect-[21/9] max-w-7xl mx-auto px-6">
-        {skills.map((skill, i) => (
-          <motion.div
-            key={skill.name}
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+      <div className="text-editorial grid md:grid-cols-2 gap-x-16 gap-y-12">
+        {skillGroups.map((group, i) => (
+          <motion.div 
+            key={group.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.05, type: 'spring', damping: 15 }}
-            whileHover={{ scale: 1.1, zIndex: 50 }}
-            className={`absolute rounded-full border flex items-center justify-center p-4 text-center cursor-default transition-shadow hover:shadow-[0_0_30px_rgba(79,127,255,0.2)] ${clusterColors[skill.cluster]}`}
-            style={{
-              width: skill.size,
-              height: skill.size,
-              left: `${skill.x}%`,
-              top: `${skill.y}%`,
-            }}
+            transition={{ delay: i * 0.1 }}
+            className="space-y-6"
           >
-            <span className="font-mono text-[10px] font-medium uppercase tracking-tight">
-              {skill.name}
-            </span>
+            <div className="flex items-center gap-4">
+              {group.icon}
+              <h3 className="font-mono text-xs uppercase tracking-[0.2em] font-bold text-paper">{group.title}</h3>
+            </div>
+            
+            <ul className="space-y-3 border-l border-ink/20 pl-6">
+              {group.skills.map(skill => (
+                <li key={skill} className="text-sm text-ink hover:text-paper transition-colors cursor-default">
+                  {skill}
+                </li>
+              ))}
+            </ul>
           </motion.div>
         ))}
-
-        {/* Legend */}
-        <div className="absolute bottom-0 right-6 flex flex-col gap-2">
-           <div className="flex items-center gap-3">
-              <div className="w-3 h-3 rounded-full border border-sky bg-sky/5" />
-              <span className="font-mono text-[8px] uppercase tracking-widest text-ink">Frontend Engineering</span>
-           </div>
-           <div className="flex items-center gap-3">
-              <div className="w-3 h-3 rounded-full border border-amber bg-amber/5" />
-              <span className="font-mono text-[8px] uppercase tracking-widest text-ink">Data Visualization</span>
-           </div>
-           <div className="flex items-center gap-3">
-              <div className="w-3 h-3 rounded-full border border-ink bg-ink/5" />
-              <span className="font-mono text-[8px] uppercase tracking-widest text-ink">Tools & Design</span>
-           </div>
-        </div>
       </div>
 
-      <div className="text-editorial mt-24">
-        <p className="font-mono text-[10px] text-ink uppercase tracking-[0.2em] text-center italic">
-          Size = familiarity. Not a claim. Just a direction.
-        </p>
+      <div className="mt-32 border-y border-ink/5 py-12">
+         <p className="text-center font-mono text-[10px] text-ink/40 uppercase tracking-[0.5em]">
+           Actively Building Research-Grade Open Data Systems
+         </p>
       </div>
     </section>
   );
