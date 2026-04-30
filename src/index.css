@@ -54,6 +54,10 @@
   .annotation-label {
     @apply font-mono text-[10px] uppercase tracking-widest text-ink;
   }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md shadow-xl border border-white/10;
+  }
 }
 
 /* Scrollytelling transitions */

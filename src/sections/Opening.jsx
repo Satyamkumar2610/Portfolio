@@ -39,13 +39,13 @@ export function Opening() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6 mb-16">
-          <a href="https://drive.google.com/file/d/1-Bj0GeAa8PNKjh2GMOLho1Gtqk_4T3Z8/view?usp=sharing" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-3 bg-sky text-white rounded font-medium hover:bg-sky/90 transition-colors">
+          <a href="https://drive.google.com/file/d/1-Bj0GeAa8PNKjh2GMOLho1Gtqk_4T3Z8/view?usp=sharing" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-3 bg-sky text-white rounded font-medium hover:bg-sky/90 hover:-translate-y-1 hover:shadow-lg hover:shadow-sky/20 transition-all duration-300">
             <FileText size={18} /> View Resume
           </a>
-          <a href="mailto:satyam.kumars2024@nst.rishihood.edu.in" className="flex items-center gap-2 px-8 py-3 border border-ink/30 text-paper rounded font-medium hover:bg-white/5 transition-colors">
+          <a href="mailto:satyam.kumars2024@nst.rishihood.edu.in" className="flex items-center gap-2 px-8 py-3 border border-ink/30 text-paper rounded font-medium hover:bg-white/5 hover:-translate-y-1 hover:border-paper/50 transition-all duration-300">
             <Mail size={18} /> Get in Touch
           </a>
-          <a href="https://github.com/Satyamkumar2610" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-3 text-ink hover:text-paper transition-colors">
+          <a href="https://github.com/Satyamkumar2610" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-3 text-ink hover:text-paper hover:-translate-y-1 transition-all duration-300">
             <GitBranch size={20} />
           </a>
         </div>
